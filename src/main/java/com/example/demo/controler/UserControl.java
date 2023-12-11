@@ -16,6 +16,7 @@ public class UserControl {
     @GetMapping("/users")
     public String getUserPage(Model model){
         List<User> users = userRepozitoriy.findAll();
+        System.out.println(users);
         model.addAttribute("users",users);
         return "User" ;
     }
